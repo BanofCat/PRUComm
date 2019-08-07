@@ -1,0 +1,11 @@
+#ifndef __MODULES_EXCEPTION_ERROR_CODE_H__
+#define __MODULES_EXCEPTION_ERROR_CODE_H__
+
+enum ErrorCode 
+{
+    OK = 1,
+    ARGS_INVALID = -1;
+}
+
+
+#endif // !__MODULES_EXCEPTION_ERROR_CODE_H__
