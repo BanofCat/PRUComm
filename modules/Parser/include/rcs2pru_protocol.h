@@ -1,7 +1,7 @@
 #ifndef __MODULES_PARSER_RCS2PRU_PROTOCOL_H__
 #define __MODULES_PARSER_RCS2PRU_PROTOCOL_H__
 
-class Pru2RcsProtocol
+class Rcs2PruProtocol
 {
 public:
     const static unsigned int PROTOCOL_DATA_LEN = 485;
@@ -22,6 +22,6 @@ public:
     const static unsigned int CHECK_SUM_POS = PACKAGE_ID_POS + PACKAGE_ID_LEN;  // 校验和， 为第0byte到第482byte的数据和
     const static unsigned int CHECK_SUM_LEN = 3;
 
-}; // !class Pru2RcsProtocol
+}; // !class Rcs2PruProtocol
 
 #endif  // !__MODULES_PARSER_RCS2PRU_PROTOCOL_H__
