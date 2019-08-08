@@ -26,7 +26,7 @@ enum LogicError
 {
     OK = 0x00,
     ARGS_INVALID = 0x01,
-}
+};
 
 enum ReadDSPError
 {
@@ -38,7 +38,20 @@ enum ReadDSPError
     R_DSP_CRC_FIX = 0x10,
     R_DSP_ACK_ERR = 0x20,
 
-}
+};
+
+enum WriteDSPError
+{
+    OK = 0x00,
+    W_DSP_FAILED = 0x01,
+};
+
+enum ReadRCSError
+{
+    OK = 0x00;
+    R_RCS_FAILED = 0x01,
+    
+};
 
 
 #endif // !__MODULES_EXCEPTION_ERROR_CODE_H__

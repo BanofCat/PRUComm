@@ -1,8 +1,9 @@
 #ifndef __MODULES_PARSER_DSP_WRITER_BUF_H__
 #define __MODULES_PARSER_DSP_WRITER_BUF_H__
 #include "pru2uart_protocol.h"
+#include "rw_buf_base.h"
 
-class DSPWriterBuf
+class DSPWriterBuf: public RWBufBase
 {
 
 public:

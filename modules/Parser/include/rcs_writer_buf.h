@@ -1,8 +1,9 @@
 #ifndef __MODULES_PARSER_RCS_WRITER_BUF_H__
 #define __MODULES_PARSER_RCS_WRITER_BUF_H__
 #include "pru2rcs_protocol.h"
+#include "rw_buf_base.h"
 
-class RCSWriterBuf
+class RCSWriterBuf: public RWBufBase
 {
 
 public:

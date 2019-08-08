@@ -1,8 +1,10 @@
 #ifndef __MODULES_PARSER_RCS_READER_BUF_H__
 #define __MODULES_PARSER_RCS_READER_BUF_H__
 #include "rcs2pru_protocol.h"
+#include "rw_buf_base.h"
 
-class RCSReaderBuf
+
+class RCSReaderBuf: public RWBufBase
 {
 
 public:

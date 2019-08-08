@@ -18,7 +18,7 @@ public:
     UartCommunicator();
     ~UartCommunicator();
     int read(DSPReaderBuf* dsp_data_obj);
-    int write(const DSPWriterBuf* dsp_data_obj);
+    int write(DSPWriterBuf* dsp_data_obj);
 }
 
 

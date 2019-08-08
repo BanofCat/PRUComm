@@ -10,7 +10,8 @@ public:
 const static unsigned int PROTOCOL_DATA_LEN = 64;
 
 const static unsigned int HEAD_POS = 0;   // 固定数值: 0
-const static unsigned int HEAD_LEN = 1; 
+const static unsigned int HEAD_LEN = 1;
+const static unsigned int HEAD_VALUE = 0;
 
 const static unsigned int TIMESTAMP_POS = HEAD_POS + HEAD_LEN;    // 每2ms周期自加1更新, 范围0-0xFF
 const static unsigned int TIMESTAMP_LEN = 1;
@@ -62,6 +63,7 @@ const static unsigned int CRC_LEN = 2;
 
 const static unsigned int TAIL_POS = CRC_POS + CRC_LEN;   // 固定数值: 255
 const static unsigned int TAIL_LEN = 1;
+const static unsigned int TAIL_VALUE = 255;
 
 
 // bit pos

@@ -1,8 +1,9 @@
 #ifndef __MODULES_PARSER_DSP_READER_BUF_H__
 #define __MODULES_PARSER_DSP_READER_BUF_H__
 #include "uart2pru_protocol.h"
+#include "rw_buf_base.h"
 
-class DSPReaderBuf
+class DSPReaderBuf: public RWBufBase
 {
 
 public:
