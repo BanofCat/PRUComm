@@ -17,12 +17,12 @@ public:
         return OK;
     }
 
-    virtual const unsigned char* get_data_ptr()
+    virtual const unsigned char* getDataPtr()
     {
         return this->data;
     }
 
-    virtual unsigned int get_data_length()
+    virtual unsigned int getDataLength()
     {
         return this->data_length;
     }

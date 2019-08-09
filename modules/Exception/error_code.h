@@ -18,7 +18,7 @@
 #define throwErrorCode(err_code)        \
 {                                       \
     PrintTime_s();                      \
-    fprintf(stderr, "[%s][%s][%d]catch error: %d\n", Filename(__FILE__), __FUNCTION__, __LINE__, err_code);  \
+    fprintf(stderr, "[%s][%s][%d]catch error: %x\n", Filename(__FILE__), __FUNCTION__, __LINE__, err_code);  \
     return err_code;                    \
 }
 
@@ -49,8 +49,16 @@ enum WriteDSPError
 enum ReadRCSError
 {
     OK = 0x00;
-    R_RCS_FAILED = 0x01,
+    R_RCS_CHECK_SUM_ERR = 0x01,
+    R_RCS_ID_ERR = 0x02,
+    R_RCS_FAILED = 0x10,
     
+};
+
+enum WriteRCSError
+{
+    OK = 0x00,
+    W_RCS_FAILED = 0x01,
 };
 
 

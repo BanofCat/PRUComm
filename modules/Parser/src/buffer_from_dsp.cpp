@@ -1,15 +1,15 @@
-#include "dsp_reader_buf.h"
+#include "buffer_from_dsp.h"
 #include "error_code.h"
 
-DSPReaderBuf::
-DSPReaderBuf()
+BufferFromDSP::
+BufferFromDSP()
 {
     this->data_length = Uart2PruProtocol::PROTOCOL_DATA_LEN;
     this->data = new unsigned char[this->data_length];
 }
 
-DSPReaderBuf::
-~DSPReaderBuf()
+BufferFromDSP::
+~BufferFromDSP()
 {
     if (this->data != NULL) {
         delete[] this->data;
@@ -18,63 +18,63 @@ DSPReaderBuf::
     this->data_length = 0;
 }
 
-const unsigned char* DSPReaderBuf::
-get_head()
+const unsigned char* BufferFromDSP::
+getHead()
 {
     return &this->data[Uart2PruProtocol::HEAD_POS];
 }
 
-const unsigned char* DSPReaderBuf::
-get_timestamp()
+const unsigned char* BufferFromDSP::
+getTimestamp()
 {
     return &this->data[Uart2PruProtocol::TIMESTAMP_POS];
 }
 
-const unsigned char* DSPReaderBuf::
-get_pos()
+const unsigned char* BufferFromDSP::
+getPos()
 {
     return &this->data[Uart2PruProtocol::ENCODER_POS];
 }
 
-const unsigned char* DSPReaderBuf::
-get_protect_code()
+const unsigned char* BufferFromDSP::
+getProtectCode()
 {
     return &this->data[Uart2PruProtocol::PROTECTION_POS];
 }
 
-const unsigned short* DSPReaderBuf::
-get_dsp_version()
+const unsigned short* BufferFromDSP::
+getDspVersion()
 {
     unsigned short* protection_ptr = &this->data[Uart2PruProtocol::MASTER_VERSION_POS];
     return *protection_ptr;
 }
 
-const unsigned char* DSPReaderBuf::
-get_servo_brake()
+const unsigned char* BufferFromDSP::
+getServoBrake()
 {
     return &this->data[Uart2PruProtocol::SERVO_BRAKE_POS];
 }
 
-const unsigned char* DSPReaderBuf::
-get_ack()
+const unsigned char* BufferFromDSP::
+getAck()
 {
     return &this->data[Uart2PruProtocol::ACK_POS];
 }
 
-const unsigned char* DSPReaderBuf::
-get_isr_ticker()
+const unsigned char* BufferFromDSP::
+getIsrTicker()
 {
     return &this->data[Uart2PruProtocol::ISR_TICKER_POS];
 }
 
-const unsigned char* DSPReaderBuf::
-get_crc()
+const unsigned char* BufferFromDSP::
+getCrc()
 {
     return &this->data[Uart2PruProtocol::CRC_POS];
 }
 
-const unsigned char* DSPReaderBuf::
-get_tail()
+const unsigned char* BufferFromDSP::
+getTail()
 {
     return &this->data[Uart2PruProtocol::TAIL_POS];
 }

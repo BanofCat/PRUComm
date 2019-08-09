@@ -2,11 +2,19 @@
 #define __MODULES_COMMUNICATOR_UART_COMMUNICATOR_H__
 
 #include "uart_device_simulation.h"
-#include "dsp_reader_buf.h"
-#include "dsp_writer_buf.h"
+#include "buffer_from_dsp.h"
+#include "buffer_to_dsp.h"
 #include "crc.h"
 
-class UartCommunicator
+struct UARTProtocolInfo
+{
+    unsigned char time_stamp;
+    unsigned char ack;
+    unsigned char isr_ticker[];
+}
+
+
+class UARTComm
 {
 private:
     UartDeviceSimulation uart_dev;
@@ -15,10 +23,8 @@ private:
     unsigned char last_ack;
     const static int MAX_ACK_ERR = 5;
 public:
-    UartCommunicator();
-    ~UartCommunicator();
-    int read(DSPReaderBuf* dsp_data_obj);
-    int write(DSPWriterBuf* dsp_data_obj);
+    int read(BufferFromDSP* dsp_data_obj);
+    int write(BufferToDSP* dsp_data_obj);
 }
 
 
