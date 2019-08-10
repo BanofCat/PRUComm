@@ -1,6 +1,13 @@
 #include "rcs_comm.h"
 #include "error_code.h"
 
+/* public */
+RCSComm::
+RCSComm()
+{
+    this->rcs_dev.init(NULL);
+}
+
 int RCSComm::
 read(BufferFromRCS* rcs_data_obj)
 {
@@ -21,7 +28,7 @@ read(BufferFromRCS* rcs_data_obj)
     }
 
     // check checksum
-    if (rcs_data_obj->get_check_sum() != rcs_data_obj->calculateCheckSum()) {
+    if (rcs_data_obj->getCheckSum() != rcs_data_obj->calculateCheckSum()) {
         throwErrorCode(R_RCS_CHECK_SUM_ERR);
     }
 

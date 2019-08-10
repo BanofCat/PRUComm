@@ -1,5 +1,7 @@
 #ifndef __MODULES_PARSER_RW_BUF_BASE_H__
 #define __MODULES_PARSER_RW_BUF_BASE_H__
+#include "error_code.h"
+#include "string.h"
 
 class RWBufBase
 {
@@ -27,7 +29,7 @@ public:
         return this->data_length;
     }
 
-}
+};  // !class RWBufBase
 
 
 #endif // !__MODULES_PARSER_RW_BUF_BASE_H__

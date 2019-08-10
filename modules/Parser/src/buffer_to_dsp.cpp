@@ -15,7 +15,7 @@ BufferToDSP::
 {
     if (this->data != NULL) {
         delete[] this->data;
-        this->data = NULL; `
+        this->data = NULL;
     }
     this->data_length = 0;
 }
@@ -71,11 +71,12 @@ setTail(unsigned char* data, unsigned int data_size_byte)
 }
 
 /* private */
-int setData(unsigned char* data, unsigned int start_pos, unsigned int data_size_byte, unsigned int max_size_byte)
+int BufferToDSP::
+setData(unsigned char* data, unsigned int start_pos, unsigned int data_size_byte, unsigned int max_size_byte)
 {
     if (data == NULL || data_size_byte > max_size_byte) {
         throwErrorCode(ARGS_INVALID);
     }
     memcpy(&this->data[start_pos], data, data_size_byte);
-    return OK;    
+    return OK;  
 }

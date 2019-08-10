@@ -1,4 +1,4 @@
-# Install script for directory: /home/ban/Ban/PRUComm/modules/Communicator
+# Install script for directory: /home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Communicator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

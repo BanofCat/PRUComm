@@ -1,4 +1,4 @@
-# Install script for directory: /home/ban/Ban/PRUComm/modules/Exception
+# Install script for directory: /home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Exception
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

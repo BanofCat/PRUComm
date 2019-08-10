@@ -1,4 +1,4 @@
-# Install script for directory: /home/ban/Ban/PRUComm/modules/Parser
+# Install script for directory: /home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Parser
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

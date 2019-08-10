@@ -45,8 +45,9 @@ getProtectCode()
 const unsigned short* BufferFromDSP::
 getDspVersion()
 {
-    unsigned short* protection_ptr = &this->data[Uart2PruProtocol::MASTER_VERSION_POS];
-    return *protection_ptr;
+    static unsigned short protection_data;
+    memcpy(&protection_data, &this->data[Uart2PruProtocol::MASTER_VERSION_POS], sizeof(protection_data));
+    return &protection_data;
 }
 
 const unsigned char* BufferFromDSP::

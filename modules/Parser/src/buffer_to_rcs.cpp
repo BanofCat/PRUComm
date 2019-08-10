@@ -15,7 +15,7 @@ BufferToRCS::
 {
     if (this->data != NULL) {
         delete[] this->data;
-        this->data = NULL; `
+        this->data = NULL;
     }
     this->data_length = 0;
 }
@@ -75,11 +75,12 @@ generateCheckSum()
     for (int i = Pru2RcsProtocol::ENCODER_POS; i < Pru2RcsProtocol::PRU_CHECK_SUM_POS; ++i) {
         check_sum += this->data[i];
     }
-    return this->setCheckSum((unsigned char*)&check_sum);
+    this->setCheckSum((unsigned char*)&check_sum, Pru2RcsProtocol::PRU_CHECK_SUM_LEN);
 }
 
 /* private */
-int setData(unsigned char* data, unsigned int start_pos, unsigned int data_size_byte, unsigned int max_size_byte)
+int BufferToRCS::
+setData(unsigned char* data, unsigned int start_pos, unsigned int data_size_byte, unsigned int max_size_byte)
 {
     if (data == NULL || data_size_byte > max_size_byte) {
         throwErrorCode(ARGS_INVALID);

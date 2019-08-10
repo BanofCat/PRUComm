@@ -15,7 +15,7 @@ struct RCSProtocolInfo
     // init
     RCSProtocolInfo()
     {
-        timestamp = 0;
+        time_stamp = 0;
         id = 0;
         request_counter = 0;
     }
@@ -34,8 +34,9 @@ private:
     unsigned char last_ack;
     const static int MAX_ACK_ERR = 5;
 public:
-    int packageWriteData();
-    unsigned char getRequestCounter();
+    RCSComm();
+    // int packageWriteData();
+    // unsigned char getRequestCounter();
     int read(BufferFromRCS* rcs_data_obj);
     int write(BufferToRCS* rcs_data_obj);
 }; // ! class RCSComm

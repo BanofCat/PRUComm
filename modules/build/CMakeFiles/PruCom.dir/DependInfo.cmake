@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ban/Ban/PRUComm/modules/Communicator/src/rcs_comm.cpp" "/home/ban/Ban/PRUComm/modules/build/CMakeFiles/PruCom.dir/Communicator/src/rcs_comm.cpp.o"
-  "/home/ban/Ban/PRUComm/modules/Communicator/src/uart_comm.cpp" "/home/ban/Ban/PRUComm/modules/build/CMakeFiles/PruCom.dir/Communicator/src/uart_comm.cpp.o"
-  "/home/ban/Ban/PRUComm/modules/Main_test.cpp" "/home/ban/Ban/PRUComm/modules/build/CMakeFiles/PruCom.dir/Main_test.cpp.o"
-  "/home/ban/Ban/PRUComm/modules/Parser/src/buffer_from_dsp.cpp" "/home/ban/Ban/PRUComm/modules/build/CMakeFiles/PruCom.dir/Parser/src/buffer_from_dsp.cpp.o"
-  "/home/ban/Ban/PRUComm/modules/Parser/src/buffer_from_rcs.cpp" "/home/ban/Ban/PRUComm/modules/build/CMakeFiles/PruCom.dir/Parser/src/buffer_from_rcs.cpp.o"
-  "/home/ban/Ban/PRUComm/modules/Parser/src/buffer_to_dsp.cpp" "/home/ban/Ban/PRUComm/modules/build/CMakeFiles/PruCom.dir/Parser/src/buffer_to_dsp.cpp.o"
-  "/home/ban/Ban/PRUComm/modules/Parser/src/buffer_to_rcs.cpp" "/home/ban/Ban/PRUComm/modules/build/CMakeFiles/PruCom.dir/Parser/src/buffer_to_rcs.cpp.o"
-  "/home/ban/Ban/PRUComm/modules/Utils/src/route_list.cpp" "/home/ban/Ban/PRUComm/modules/build/CMakeFiles/PruCom.dir/Utils/src/route_list.cpp.o"
+  "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Communicator/src/rcs_comm.cpp" "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/build/CMakeFiles/PruCom.dir/Communicator/src/rcs_comm.cpp.o"
+  "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Communicator/src/uart_comm.cpp" "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/build/CMakeFiles/PruCom.dir/Communicator/src/uart_comm.cpp.o"
+  "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Main_test.cpp" "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/build/CMakeFiles/PruCom.dir/Main_test.cpp.o"
+  "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Parser/src/buffer_from_dsp.cpp" "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/build/CMakeFiles/PruCom.dir/Parser/src/buffer_from_dsp.cpp.o"
+  "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Parser/src/buffer_from_rcs.cpp" "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/build/CMakeFiles/PruCom.dir/Parser/src/buffer_from_rcs.cpp.o"
+  "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Parser/src/buffer_to_dsp.cpp" "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/build/CMakeFiles/PruCom.dir/Parser/src/buffer_to_dsp.cpp.o"
+  "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Parser/src/buffer_to_rcs.cpp" "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/build/CMakeFiles/PruCom.dir/Parser/src/buffer_to_rcs.cpp.o"
+  "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/Utils/src/route_list.cpp" "/home/ban/WorkPlace/Develop/develop/home_work/PRUComm/modules/build/CMakeFiles/PruCom.dir/Utils/src/route_list.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

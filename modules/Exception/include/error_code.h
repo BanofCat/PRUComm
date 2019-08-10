@@ -1,7 +1,10 @@
 #ifndef __MODULES_EXCEPTION_ERROR_CODE_H__
 #define __MODULES_EXCEPTION_ERROR_CODE_H__
 
-#include<sys/time.h>
+#include <time.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <iostream>
 #define PrintTime_s()                   \
         {                               \
             struct timeval tv;          \
@@ -18,7 +21,7 @@
 #define throwErrorCode(err_code)        \
 {                                       \
     PrintTime_s();                      \
-    fprintf(stderr, "[%s][%s][%d]catch error: %x\n", Filename(__FILE__), __FUNCTION__, __LINE__, err_code);  \
+    fprintf(stderr, "[%s][%s][%d]catch error: %x\n", FILE_NAME(__FILE__), __FUNCTION__, __LINE__, err_code);  \
     return err_code;                    \
 }
 
@@ -30,7 +33,7 @@ enum LogicError
 
 enum ReadDSPError
 {
-    OK = 0x00,
+    R_DSP_OK = 0x00,
     R_DSP_FAILED = 0x01,
     R_DSP_HEAD_ERR = 0x02,
     R_DSP_TAIL_ERR = 0x04,
@@ -42,13 +45,13 @@ enum ReadDSPError
 
 enum WriteDSPError
 {
-    OK = 0x00,
+    W_DSP_OK = 0x00,
     W_DSP_FAILED = 0x01,
 };
 
 enum ReadRCSError
 {
-    OK = 0x00;
+    R_RCS_OK = 0x00,
     R_RCS_CHECK_SUM_ERR = 0x01,
     R_RCS_ID_ERR = 0x02,
     R_RCS_FAILED = 0x10,
@@ -57,9 +60,20 @@ enum ReadRCSError
 
 enum WriteRCSError
 {
-    OK = 0x00,
+    W_RCS_OK = 0x00,
     W_RCS_FAILED = 0x01,
 };
 
+static void printData(const unsigned char* data, unsigned int len, std::string title, unsigned int next_line=10)
+{
+    fprintf(stderr, "\n===%s: start===\n", title.c_str());
+    for(int i = 0; i < len; ++i) {
+        if(i % next_line == 0) {
+            fprintf(stderr, "\n");
+        }
+        fprintf(stderr, "%u\t\t", data[i]);
+    }
+    fprintf(stderr, "\n---%s: end---\n\n", title.c_str());
+};
 
 #endif // !__MODULES_EXCEPTION_ERROR_CODE_H__
