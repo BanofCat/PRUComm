@@ -21,13 +21,13 @@ public:
                                                                                             0x20 PRU读取DSP数据连续5个周期包ACK未改变
     const static unsigned int PRU_ERROR_FLAG_LEN = 1;
 
-    const static unsigned int MASTER_VERSION_POS = PRU_ERROR_FLAG_POS + PRU_ERROR_FLAG_LEN; // PRU主版本号
-    const static unsigned int MASTER_VERSION_LEN = 1;
+    const static unsigned int PRU_MASTER_VERSION_POS = PRU_ERROR_FLAG_POS + PRU_ERROR_FLAG_LEN; // PRU主版本号
+    const static unsigned int PRU_MASTER_VERSION_LEN = 1;
 
-    const static unsigned int BRANCH_VERSION_POS = MASTER_VERSION_POS + MASTER_VERSION_LEN; // PRU从版本号
-    const static unsigned int BRANCH_VERSION_LEN = 1;
+    const static unsigned int PRU_BRANCH_VERSION_POS = PRU_MASTER_VERSION_POS + PRU_MASTER_VERSION_LEN; // PRU从版本号
+    const static unsigned int PRU_BRANCH_VERSION_LEN = 1;
 
-    const static unsigned int HANDSHAKE_STATUS_POS = BRANCH_VERSION_POS + BRANCH_VERSION_LEN;   // 表示PRU处于握手阶段的状态：\
+    const static unsigned int HANDSHAKE_STATUS_POS = PRU_BRANCH_VERSION_POS + PRU_BRANCH_VERSION_LEN;   // 表示PRU处于握手阶段的状态：\
                                                                                                     0x00 正常               \
                                                                                                     0x01 与RCS握手时读取RPMSG数据超时   \
                                                                                                     0x02 与RCS握手时读取RPMSG数据包错误 \

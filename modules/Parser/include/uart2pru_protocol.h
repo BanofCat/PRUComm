@@ -31,13 +31,13 @@ const static unsigned int ENCODER_STEP_LEN = 4;   // a motor data contains 4 byt
 const static unsigned int PROTECTION_POS = ENCODER_POS + ENCODER_LEN;   // 十进制保护信息计算: 第40byte * 256 + 第39byte
 const static unsigned int PROTECTION_LEN = 10;
 
-const static unsigned int MASTER_VERSION_POS = PROTECTION_POS + PROTECTION_LEN;  // DSP主程序版本信息
-const static unsigned int MASTERVERSION_LEN = 1;
+const static unsigned int DSP_MASTER_VERSION_POS = PROTECTION_POS + PROTECTION_LEN;  // DSP主程序版本信息
+const static unsigned int DSP_MASTERVERSION_LEN = 1;
 
-const static unsigned int BRANCH_VERSION_POS = MASTER_VERSION_POS + MASTERVERSION_LEN;  // DSP从程序版本信息
-const static unsigned int BRANCH_VERSION_LEN = 1;
+const static unsigned int DSP_BRANCH_VERSION_POS = DSP_MASTER_VERSION_POS + DSP_MASTERVERSION_LEN;  // DSP从程序版本信息
+const static unsigned int DSP_BRANCH_VERSION_LEN = 1;
 
-const static unsigned int OCP_GPIO_POS = BRANCH_VERSION_POS + BRANCH_VERSION_LEN;
+const static unsigned int OCP_GPIO_POS = DSP_BRANCH_VERSION_POS + DSP_BRANCH_VERSION_LEN;
 const static unsigned int OCP_GPIO_LEN = 1;
 
 const static unsigned int BLANK_1_POS = OCP_GPIO_POS + OCP_GPIO_LEN;  // 预留位
